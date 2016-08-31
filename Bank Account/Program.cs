@@ -11,9 +11,9 @@ namespace Bank_Account
         static void Main(string[] args)
         {
             
-            CheckingAccount hutz = new CheckingAccount();
-            SavingsAccount lionel = new SavingsAccount();
-            ReserveAccount lame = new ReserveAccount();
+            CheckingAccount ch = new CheckingAccount();
+            SavingsAccount sa = new SavingsAccount();
+            ReserveAccount re = new ReserveAccount();
             string main;
 
 
@@ -36,11 +36,11 @@ namespace Bank_Account
 
                 if (option == 2)
                 {
-                    Console.WriteLine("Checking Balance: " + hutz.checkingBalance);
+                    Console.WriteLine("Checking Balance: " + ch.checkingBalance);
                     Console.WriteLine();
-                    Console.WriteLine("Savings Balance: " + lionel.savingsBalance );
+                    Console.WriteLine("Savings Balance: " + sa.savingsBalance );
                     Console.WriteLine();
-                    Console.WriteLine("Reserves Balance: " + lame.reserveBalance);
+                    Console.WriteLine("Reserves Balance: " + re.reserveBalance);
                 }
 
 
@@ -56,8 +56,8 @@ namespace Bank_Account
                     {
                         Console.WriteLine("How much would you like to deposit today?");
                         double cd = double.Parse(Console.ReadLine());
-                        Console.WriteLine("Current Daily Deposits: " + (hutz.checkingDeposit + cd));
-                        hutz.checkingBalance += cd;
+                        Console.WriteLine("Current Daily Deposits: " + (ch.checkingDeposit + cd));
+                        ch.checkingBalance += cd;
 
                     }
 
@@ -65,16 +65,16 @@ namespace Bank_Account
                     {
                         Console.WriteLine("How much would you like to deposit today?");
                         double sd = double.Parse(Console.ReadLine());
-                        Console.WriteLine("Current Daily Deposits: " + (lionel.savingsDeposits + sd));
-                        lionel.savingsBalance += sd;
+                        Console.WriteLine("Current Daily Deposits: " + (sa.savingsDeposits + sd));
+                        sa.savingsBalance += sd;
                     }
 
                     if (optionDF == 3)
                     {
                         Console.WriteLine("How much would you like to deposit today?");
                         double rd = double.Parse(Console.ReadLine());
-                        Console.WriteLine("Current Daily Deposits: " + (lame.reserveDeposit + rd));
-                        lame.reserveBalance += rd;
+                        Console.WriteLine("Current Daily Deposits: " + (re.reserveDeposit + rd));
+                        re.reserveBalance += rd;
                     }
 
 
@@ -92,11 +92,11 @@ namespace Bank_Account
                     {
                         Console.WriteLine("How much would you like to withdraw today?");
                         double cw = double.Parse(Console.ReadLine());
-                        Console.WriteLine("Current Daily Withdraws: " + (hutz.checkingWithdraw + cw));
-                        hutz.checkingBalance -= cw;
-                        if (cw > hutz.checkingBalance)
+                        Console.WriteLine("Current Daily Withdraws: " + (ch.checkingWithdraw + cw));
+                        ch.checkingBalance -= cw;
+                        if (cw > ch.checkingBalance)
                         {
-                            hutz.Negative();
+                            ch.Negative();
                         }
 
                     }
@@ -105,11 +105,11 @@ namespace Bank_Account
                     {
                         Console.WriteLine("How much would you like to withdraw today?");
                         double sw = double.Parse(Console.ReadLine());
-                        Console.WriteLine("Current Daily Withdraws: " + (lionel.savingsWithdraw + sw));
-                        lionel.savingsBalance -= sw;
-                        if (sw > lionel.savingsBalance)
+                        Console.WriteLine("Current Daily Withdraws: " + (sa.savingsWithdraw + sw));
+                        sa.savingsBalance -= sw;
+                        if (sw > sa.savingsBalance)
                         {
-                            lionel.Negative();
+                            sa.Negative();
                         }
                     }
 
@@ -117,11 +117,11 @@ namespace Bank_Account
                     {
                         Console.WriteLine("How much would you like to withdraw today?");
                         double rw = double.Parse(Console.ReadLine());
-                        Console.WriteLine("Current Daily Withdraws: " + (lame.reserveWithdraw + rw));
-                        lame.reserveBalance -= rw;
-                        if (rw > lame.reserveBalance)
+                        Console.WriteLine("Current Daily Withdraws: " + (re.reserveWithdraw + rw));
+                        re.reserveBalance -= rw;
+                        if (rw > re.reserveBalance)
                         {
-                            lame.Negative();
+                            re.Negative();
                         }
                     }
 
@@ -146,19 +146,6 @@ namespace Bank_Account
                 Console.Clear();
             }
             while (main == "YES");
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
