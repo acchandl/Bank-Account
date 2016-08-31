@@ -72,46 +72,6 @@ namespace Bank_Account
 
 
 
-        //constructors
-
-      
-      
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-        public void SD()
-        {
-            Random random = new Random();
-            double[] randomNumber = new double[1];
-            for (int savingsDeposits = 0; savingsDeposits < randomNumber.Length; savingsDeposits++)
-                {
-                    randomNumber[savingsDeposits] = random.Next(0, 500);
-                }
-            foreach (int savingsDeposits in randomNumber)
-                {
-                Console.WriteLine("$" + savingsDeposits);
-                
-            }
-        }
-*/
-
-
-
-
 
 
 
