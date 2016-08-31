@@ -15,11 +15,7 @@ namespace Bank_Account
        
         protected double deposit;
         
-       
-        
-        
-           
-            
+      
            
         //properties and fields can be related
         //enter the starting balance..or hard code it 
@@ -31,10 +27,7 @@ namespace Bank_Account
 
         }
 
-       
-
-
-
+      
 
         public virtual void showTotal()
         {
@@ -51,16 +44,6 @@ namespace Bank_Account
                 tempbalance -= -36.50;
             } 
         }
-
-
-        
-       
-
-
-
-
-
-
 
 
 
